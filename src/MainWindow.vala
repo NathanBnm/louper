@@ -47,7 +47,7 @@ public class MainWindow : Hdy.ApplicationWindow {
 
     construct {
         var no_content_view = new Granite.Widgets.AlertView (
-            _("No Text is Selected"),
+            _("No text is selected"),
             _("Open the app after selecting some text."),
             ""
         );
