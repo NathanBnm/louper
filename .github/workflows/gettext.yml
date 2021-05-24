@@ -1,14 +1,15 @@
 name: Gettext updates
 on:
   push:
-    branches: main
+    branches: no-deb-packaging
 jobs:
   gettext_template:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: elementary/actions/gettext-template@master
+    - uses: ryonakano/actions/gettext-template@gettext-no-deb-packaging
       env:
         GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
       with:
         regenerate_po: 'true'
+        translation_branch: 'no-deb-packaging'
